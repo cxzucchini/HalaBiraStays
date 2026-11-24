@@ -1,0 +1,23 @@
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          hala-bira_stays/ (Root)                        │
+│              npm run dev -> concurrently (server + client)              │
+└───────────────────────────────┬────────────────────────┬────────────────┘
+                                │                        │
+           ┌────────────────────▼────┐      ┌──────────▼──────────────┐
+           │   client/ (React+Vite)  │      │   server/ (Node+Express)│
+           │     Port 5173 (Dev)     │      │       Port 5000         │
+           │                         │      │                         │
+           │  • Search & Filter Bar  │─────►│  • Express + CORS + JSON│
+           │  • Stays Grid & Cards   │ /api │  • /api/stays (GET)     │
+           │  • Saved Shortlist      │ proxy│  • /api/reservations    │
+           │  • Stay & Route Guide   │      │  • Mongoose Schemas     │
+           │  • Booking Modal        │      └──────────┬──────────────┘
+           └─────────────────────────┘                 │
+                                                       │ Mongoose
+                                                       ▼
+                                           ┌─────────────────────────┐
+                                           │   MongoDB (Atlas/Local) │
+                                           │                         │
+                                           │  • accommodations       │
+                                           │  • reservations         │
+                                           └─────────────────────────┘

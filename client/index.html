@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hala Bira Stays — Dinagyang Festival Accommodations (Iloilo City)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Cormorant Garamond", "serif"],
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            colors: {
+              terracotta: {
+                400: "#E87A5D",
+                500: "#D45B3B",
+                600: "#B34326",
+                900: "#4A190D",
+              },
+              indigoDeep: {
+                950: "#090B14",
+                900: "#0F1322",
+                800: "#171D33",
+                700: "#222B4A",
+              },
+              festiveGold: {
+                300: "#F9E59E",
+                400: "#F0C84B",
+                500: "#D9A520",
+                600: "#A97B10",
+              },
+            },
+            boxShadow: {
+              "gold-soft": "0 10px 30px -5px rgba(217, 165, 32, 0.22)",
+              "terracotta-glow": "0 10px 30px -5px rgba(212, 91, 59, 0.35)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col font-sans antialiased selection:bg-festiveGold-400 selection:text-indigoDeep-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
